@@ -7,6 +7,6 @@ public class startButtonScript : MonoBehaviour
 {
   public void OnClickStartButton()
   {
-      SceneManager.LoadScene("battleScene");
+      SceneManager.LoadScene("Battle");
   }
 }
