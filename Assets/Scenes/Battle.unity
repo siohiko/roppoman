@@ -266,6 +266,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfdc73cbbc23a44d3b9c1c3143a786cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  panels:
+  - {fileID: 1035674169}
+  - {fileID: 1504832720}
+  - {fileID: 560256967}
+  - {fileID: 846603213}
+  - {fileID: 541573848}
+  - {fileID: 916163169}
+  - {fileID: 558957538}
+  - {fileID: 449613815}
+  - {fileID: 1886129054}
+  - {fileID: 1349417834}
+  - {fileID: 142227444}
+  - {fileID: 591344241}
+  - {fileID: 224341040}
+  - {fileID: 1077485435}
+  - {fileID: 817444175}
+  - {fileID: 617422255}
+  - {fileID: 554969529}
+  - {fileID: 284388594}
 --- !u!1 &224341040
 GameObject:
   m_ObjectHideFlags: 0
