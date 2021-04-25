@@ -4,11 +4,10 @@ using UnityEngine;
 
 public class PanelManager : MonoBehaviour
 {
-    public GameObject[] panels;
+    public GameObject[,] panels = new GameObject[3,6];
     
     void Awake() {
-      InitPanelIndex();
-      InitPanelOwner();
+      SetPanel();
     }
 
     void Start() {}
@@ -22,36 +21,24 @@ public class PanelManager : MonoBehaviour
     }
 
 
-    //パネルのインデックスを初期化
-    private void InitPanelIndex() {
-      int x = 0;
-      int y = 0;
+    private void SetPanel() {
+      int i = 0;
+      int j = 0;
+      foreach (Transform childTransform in this.gameObject.transform){
+        panels[i,j] = childTransform.gameObject;
+        Panel panel = panels[i,j].GetComponent<Panel>();
 
-      foreach (GameObject panelObject in panels) {
-        Panel panel;
-        panel = panelObject.GetComponent<Panel>();
-        panel.index = (x,y);
-
-        if( x == 5 ) {
-          x = 0;
-          y++;
-        } else {
-          x++;
-        }
-      }
-    }
-
-
-    //パネルの所有者を初期化
-    private void InitPanelOwner() {
-      foreach (GameObject panelObject in panels) {
-        Panel panel;
-        panel = panelObject.GetComponent<Panel>();
-
-        if( panel.index.Item1 <= 2) {
+        if(j < 3) {
           panel.panelOwner = PanelOwner.Self;
         } else {
           panel.panelOwner = PanelOwner.Enemy;
+        }
+
+        j++;
+
+        if(j > 5) {
+          j = 0;
+          i++;
         }
       }
     }
