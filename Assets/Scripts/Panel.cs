@@ -9,7 +9,7 @@ public class Panel : MonoBehaviour
 {
   public (int, int) index { get; set; }
   public PanelOwner panelOwner { get; set; }
-  public PanelState panelState { get; set; }
+  public PanelState panelState { get; set; } = PanelState.None;
 
   void Awake() {}
 

@@ -53,9 +53,6 @@ public class PanelManager : MonoBehaviour
         } else {
           panel.panelOwner = PanelOwner.Enemy;
         }
-
-        Debug.Log(panel.index);
-        Debug.Log(panel.panelOwner);
       }
     }
 
