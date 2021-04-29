@@ -4,24 +4,43 @@ using UnityEngine;
 
 public class PanelManager : MonoBehaviour
 {
-    int[,] panelState;
-    enum panelStateConst
-    {
-        None,
-        Self,
-        Enemy
-    } 
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        panelState = new int[6,3]; //intの場合初期値0
-        panelState[1,1] = 1;
+    public GameObject[,] panels = new GameObject[3,6];
+    
+    void Awake() {
+      SetPanel();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    void Start() {}
+
+    void Update() {}
+
+    public void ChangePanelState() {
     }
+
+    public void ChangePanelOwner() {
+    }
+
+
+    private void SetPanel() {
+      int i = 0;
+      int j = 0;
+      foreach (Transform childTransform in this.gameObject.transform){
+        panels[i,j] = childTransform.gameObject;
+        Panel panel = panels[i,j].GetComponent<Panel>();
+
+        if(j < 3) {
+          panel.panelOwner = PanelOwner.Self;
+        } else {
+          panel.panelOwner = PanelOwner.Enemy;
+        }
+
+        j++;
+
+        if(j > 5) {
+          j = 0;
+          i++;
+        }
+      }
+    }
+
 }
