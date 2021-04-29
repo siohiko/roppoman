@@ -279,25 +279,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfdc73cbbc23a44d3b9c1c3143a786cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  panels:
-  - {fileID: 1035674169}
-  - {fileID: 1504832720}
-  - {fileID: 560256967}
-  - {fileID: 1349417834}
-  - {fileID: 142227444}
-  - {fileID: 591344241}
-  - {fileID: 846603213}
-  - {fileID: 541573848}
-  - {fileID: 916163169}
-  - {fileID: 224341040}
-  - {fileID: 1077485435}
-  - {fileID: 817444175}
-  - {fileID: 558957538}
-  - {fileID: 449613815}
-  - {fileID: 1886129054}
-  - {fileID: 617422255}
-  - {fileID: 554969529}
-  - {fileID: 284388594}
 --- !u!1 &224341040
 GameObject:
   m_ObjectHideFlags: 0
@@ -594,7 +575,7 @@ GameObject:
   - component: {fileID: 509465561}
   - component: {fileID: 509465560}
   m_Layer: 0
-  m_Name: GameManager
+  m_Name: BattleManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -609,7 +590,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 509465559}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 348f7ab07340f40fa91540fd1f7f862f, type: 3}
+  m_Script: {fileID: 11500000, guid: aefa6162dbc9f4a638ebfea8fd6560d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &509465561
