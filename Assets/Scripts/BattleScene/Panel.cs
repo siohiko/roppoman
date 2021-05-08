@@ -9,11 +9,4 @@ public class Panel : MonoBehaviour
 {
   public PanelOwner panelOwner { get; set; }
   public PanelState panelState { get; set; } = PanelState.None;
-
-  void Awake() {}
-
-  void Start() {}
-
-  void Update() {}
-
 }

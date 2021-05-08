@@ -229,7 +229,7 @@ GameObject:
   - component: {fileID: 210119131}
   - component: {fileID: 210119132}
   m_Layer: 0
-  m_Name: Panels
+  m_Name: Stage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2287,7 +2287,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4746058522450497633, guid: d61fbf4dfd71248179c6215c74b7487f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.79
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4746058522450497633, guid: d61fbf4dfd71248179c6215c74b7487f, type: 3}
       propertyPath: m_LocalPosition.y

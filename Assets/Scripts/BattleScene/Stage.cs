@@ -2,26 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PanelManager : MonoBehaviour
+public class Stage : MonoBehaviour
 {
     public GameObject[,] panels = new GameObject[3,6];
     
-    void Awake() {
+    public void Prepare() {
       SetPanel();
     }
 
-    void Start() {}
-
-    void Update() {}
-
-    public void ChangePanelState() {
-    }
-
-    public void ChangePanelOwner() {
-    }
-
-
-    private void SetPanel() {
+    //すでにUnity上で設置してあるパネルのgameObjectをpanelsフィールドに格納。
+    public void SetPanel() {
       int i = 0;
       int j = 0;
       foreach (Transform childTransform in this.gameObject.transform){

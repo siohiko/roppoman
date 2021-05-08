@@ -11,17 +11,16 @@ public class Player : MonoBehaviour {
     public GameObject busterPrefab;
 
 
-    void Start() {
-      moving = false;
-      bustering = false;
-    }
-
-
-    void Update() {
+    public void PlayerUpdate() {
       Move();
       Buster();
     }
 
+
+    public void Prepare() {
+      moving = false;
+      bustering = false;
+    }
 
     private void Move() {
       if(moving){ return; }
