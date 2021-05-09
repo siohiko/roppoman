@@ -5,8 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class startButtonScript : MonoBehaviour
 {
-  public void OnClickStartButton()
-  {
-      SceneManager.LoadScene("Battle");
+  public void OnClickStartButton() {
+    SceneLoader sceneLoader = SceneLoader.Instance;
+    sceneLoader.ChangeScene("StartScene", "Battle");
   }
 }
