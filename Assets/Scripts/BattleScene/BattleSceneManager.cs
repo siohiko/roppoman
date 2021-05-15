@@ -8,6 +8,7 @@ public class BattleSceneManager : MonoBehaviour
     Stage stage;
     Player player;
     ChipSelectManager chipSelectManager;
+    BattleSceneController controller;
 
     void Awake(){
       prepareBattle();
@@ -23,6 +24,7 @@ public class BattleSceneManager : MonoBehaviour
     // Update is called once per frame
     void Update(){
       player.PlayerUpdate();
+      controller.BattleSceneControllerUpdate();
     }
     
     void prepareBattle(){
@@ -33,10 +35,12 @@ public class BattleSceneManager : MonoBehaviour
       player = playerGameObj.GetComponent<Player>();
 
       chipSelectManager = new ChipSelectManager();
+      controller = new BattleSceneController();
 
       chipSelectManager.Prepare();
       stage.Prepare();
-      player.Prepare();
+      player.Prepare(stage);
+      controller.Prepare(player);
     }
 
 

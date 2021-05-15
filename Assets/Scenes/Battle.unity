@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 142227446}
   - component: {fileID: 142227447}
   m_Layer: 0
-  m_Name: Panel40
+  m_Name: Panel42
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -153,7 +153,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 210119131}
-  m_RootOrder: 4
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &142227446
 SpriteRenderer:
@@ -246,24 +246,24 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1035674170}
-  - {fileID: 1504832721}
-  - {fileID: 560256968}
-  - {fileID: 1349417835}
-  - {fileID: 142227445}
-  - {fileID: 591344242}
-  - {fileID: 846603214}
-  - {fileID: 541573849}
-  - {fileID: 916163170}
-  - {fileID: 224341041}
-  - {fileID: 1077485436}
-  - {fileID: 817444176}
   - {fileID: 558957539}
   - {fileID: 449613816}
   - {fileID: 1886129055}
   - {fileID: 617422256}
   - {fileID: 554969530}
   - {fileID: 284388595}
+  - {fileID: 846603214}
+  - {fileID: 541573849}
+  - {fileID: 916163170}
+  - {fileID: 224341041}
+  - {fileID: 1077485436}
+  - {fileID: 817444176}
+  - {fileID: 1035674170}
+  - {fileID: 1504832721}
+  - {fileID: 560256968}
+  - {fileID: 1349417835}
+  - {fileID: 142227445}
+  - {fileID: 591344242}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -386,7 +386,7 @@ GameObject:
   - component: {fileID: 284388596}
   - component: {fileID: 284388597}
   m_Layer: 0
-  m_Name: Panel52
+  m_Name: Panel50
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -404,7 +404,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 210119131}
-  m_RootOrder: 17
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &284388596
 SpriteRenderer:
@@ -481,7 +481,7 @@ GameObject:
   - component: {fileID: 449613817}
   - component: {fileID: 449613818}
   m_Layer: 0
-  m_Name: Panel12
+  m_Name: Panel10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -499,7 +499,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 210119131}
-  m_RootOrder: 13
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &449613817
 SpriteRenderer:
@@ -829,7 +829,7 @@ GameObject:
   - component: {fileID: 554969531}
   - component: {fileID: 554969532}
   m_Layer: 0
-  m_Name: Panel42
+  m_Name: Panel40
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -847,7 +847,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 210119131}
-  m_RootOrder: 16
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &554969531
 SpriteRenderer:
@@ -924,7 +924,7 @@ GameObject:
   - component: {fileID: 558957540}
   - component: {fileID: 558957541}
   m_Layer: 0
-  m_Name: Panel02
+  m_Name: Panel00
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -942,7 +942,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 210119131}
-  m_RootOrder: 12
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &558957540
 SpriteRenderer:
@@ -1019,7 +1019,7 @@ GameObject:
   - component: {fileID: 560256969}
   - component: {fileID: 560256970}
   m_Layer: 0
-  m_Name: Panel20
+  m_Name: Panel22
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1037,7 +1037,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 210119131}
-  m_RootOrder: 2
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &560256969
 SpriteRenderer:
@@ -1114,7 +1114,7 @@ GameObject:
   - component: {fileID: 591344243}
   - component: {fileID: 591344244}
   m_Layer: 0
-  m_Name: Panel50
+  m_Name: Panel52
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1132,7 +1132,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 210119131}
-  m_RootOrder: 5
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &591344243
 SpriteRenderer:
@@ -1209,7 +1209,7 @@ GameObject:
   - component: {fileID: 617422257}
   - component: {fileID: 617422258}
   m_Layer: 0
-  m_Name: Panel32
+  m_Name: Panel30
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1227,7 +1227,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 210119131}
-  m_RootOrder: 15
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &617422257
 SpriteRenderer:
@@ -1711,7 +1711,7 @@ GameObject:
   - component: {fileID: 1035674171}
   - component: {fileID: 1035674172}
   m_Layer: 0
-  m_Name: Panel00
+  m_Name: Panel02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1729,7 +1729,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 210119131}
-  m_RootOrder: 0
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1035674171
 SpriteRenderer:
@@ -1901,7 +1901,7 @@ GameObject:
   - component: {fileID: 1349417836}
   - component: {fileID: 1349417837}
   m_Layer: 0
-  m_Name: Panel30
+  m_Name: Panel32
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1919,7 +1919,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 210119131}
-  m_RootOrder: 3
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1349417836
 SpriteRenderer:
@@ -1996,7 +1996,7 @@ GameObject:
   - component: {fileID: 1504832722}
   - component: {fileID: 1504832723}
   m_Layer: 0
-  m_Name: Panel10
+  m_Name: Panel12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2014,7 +2014,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 210119131}
-  m_RootOrder: 1
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1504832722
 SpriteRenderer:
@@ -2187,7 +2187,7 @@ GameObject:
   - component: {fileID: 1886129056}
   - component: {fileID: 1886129057}
   m_Layer: 0
-  m_Name: Panel22
+  m_Name: Panel20
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2205,7 +2205,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 210119131}
-  m_RootOrder: 14
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1886129056
 SpriteRenderer:

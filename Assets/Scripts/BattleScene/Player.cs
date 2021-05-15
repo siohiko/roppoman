@@ -5,90 +5,52 @@ using UnityEngine;
 public class Player : MonoBehaviour {
     bool moving;
     bool bustering;
-    private const float moveFreeze = 0.2f;
-    private const float busterFreeze = 0.2f;
+    private const float moveFreeze = 0.15f;
+    private const float busterFreeze = 0.15f;
     public (int, int) index { get; set; } = (1,1);
     public GameObject busterPrefab;
+    private Stage stage;
 
 
     public void PlayerUpdate() {
-      Move();
-      Buster();
     }
 
 
-    public void Prepare() {
+    public void Prepare(Stage s) {
       moving = false;
       bustering = false;
+      stage = s;
     }
 
-    private void Move() {
+    //TODO:v2は整数を想定してるよ。整数じゃなかったときの例外処理はいずれ書くよ
+    public void MovePanel(Vector2 v2) {
       if(moving){ return; }
 
-      ((int, int), bool) newIndexInfo;
+      int nextPanelX = index.Item1 + (int)v2.x;
+      int nextPanelY = index.Item2 + (int)v2.y;
 
-      if(Input.GetKey(KeyCode.LeftArrow)) {
-        newIndexInfo = UpdateIndex(index, (-1, 0));
-        if (newIndexInfo.Item2) {
-          moving = true;
-          index = newIndexInfo.Item1;
-          StartCoroutine("MoveRight");
-        }
-      }
-      if(Input.GetKey (KeyCode.RightArrow)) {
-        newIndexInfo = UpdateIndex(index, (1, 0));
-        if (newIndexInfo.Item2) {
-          moving = true;
-          index = newIndexInfo.Item1;
-          StartCoroutine("MoveLeft");
-        }
-      }
-      if(Input.GetKey (KeyCode.UpArrow)) {
-        newIndexInfo = UpdateIndex(index, (0, -1));
-        if (newIndexInfo.Item2) {
-          moving = true;
-          index = newIndexInfo.Item1;
-          StartCoroutine("MoveUp");
-        }
-      }
-      if(Input.GetKey (KeyCode.DownArrow)) {
-        newIndexInfo = UpdateIndex(index, (0, 1));
-        if (newIndexInfo.Item2) {
-          moving = true;
-          index = newIndexInfo.Item1;
-          StartCoroutine("MoveDown");
-        }
+      //移動先のパネルが自陣であれば、プレイヤーを移動し、移動後プレイヤーのマス目座標（index）も更新
+      if(stage.CheckOwnPanel(nextPanelX, nextPanelY)) {
+        //ワールド内の実際のベクトルへ変換
+        Vector3 v3 = v2;
+        v3 = Vector3.Scale(v3, new Vector3(2.0f,1.43f,0.0f));
+        moving = true;
+        StartCoroutine("MoveCoroutine", v3);
+        index = (nextPanelX, nextPanelY);
       }
     }
 
-    private void Buster(){
+    IEnumerator MoveCoroutine(Vector3 v){
+      this.transform.Translate(v);
+      yield return new WaitForSeconds(moveFreeze);
+      moving = false;
+    }
+
+
+    public void Buster(){
       if(bustering){ return; }
-
-      if(Input.GetKeyUp(KeyCode.Z)){
-        bustering = true;
-        StartCoroutine("BusterCoroutine");
-      }
-    }
-
-    IEnumerator MoveRight(){
-      this.transform.Translate (-2.0f,0.0f,0.0f);
-      yield return new WaitForSeconds(moveFreeze);
-      moving = false;
-    }
-    IEnumerator MoveLeft(){
-      this.transform.Translate (2.0f,0.0f,0.0f);
-      yield return new WaitForSeconds(moveFreeze);
-      moving = false;
-    }
-    IEnumerator MoveUp(){
-      this.transform.Translate (0.0f,1.431f,0.0f);
-      yield return new WaitForSeconds(moveFreeze);
-      moving = false;
-    }
-    IEnumerator MoveDown(){
-      this.transform.Translate (0.0f,-1.431f,0.0f);
-      yield return new WaitForSeconds(moveFreeze);
-      moving = false;
+      bustering = true;
+      StartCoroutine("BusterCoroutine");
     }
 
     IEnumerator BusterCoroutine(){
@@ -98,24 +60,5 @@ public class Player : MonoBehaviour {
       yield return new WaitForSeconds(busterFreeze);
       bustering = false;
     }
-
-
-    private ((int, int), bool) UpdateIndex((int, int) currentIndex, (int,int) v) {
-      int x = currentIndex.Item1;
-      int y = currentIndex.Item2;
-      int vx = v.Item1;
-      int vy = v.Item2;
-
-      int nextX = x + vx;
-      int nextY = y + vy;
-
-      if (nextX > 2 || nextX < 0 || nextY > 2 || nextY < 0){
-        return ((x, y), false);
-      } else {
-        return ((nextX, nextY), true);
-      }
-    }
-
-
 
 }
