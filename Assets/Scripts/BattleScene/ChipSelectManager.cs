@@ -7,8 +7,8 @@ public class ChipSelectManager : MonoBehaviour
     GameObject chipSelectWindow = GameObject.Find("ChipSelectWindow");
 
     public void Prepare() {
-      float x = 0 - (Screen.width / 2);
-      chipSelectWindow.transform.position = new Vector3(x, 0, 0);
+      // float x = 0 - (Screen.width / 2);
+      // chipSelectWindow.transform.position = new Vector3(x, 0, 0);
 
     }
 

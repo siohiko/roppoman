@@ -2175,6 +2175,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   busterPrefab: {fileID: 3409037274980452704, guid: 6cc98c7099d7443288705b342a6599b8, type: 3}
+--- !u!1 &1659055321 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8332152450196680641, guid: d61fbf4dfd71248179c6215c74b7487f, type: 3}
+  m_PrefabInstance: {fileID: 1927785077}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1886129054
 GameObject:
   m_ObjectHideFlags: 0
@@ -2277,6 +2282,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 50180297039851993, guid: d61fbf4dfd71248179c6215c74b7487f, type: 3}
+      propertyPath: battleChipStateHolder
+      value: 
+      objectReference: {fileID: 1659055321}
     - target: {fileID: 3086561561157485197, guid: d61fbf4dfd71248179c6215c74b7487f, type: 3}
       propertyPath: m_Name
       value: ChipSelectWindow
@@ -2287,7 +2296,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4746058522450497633, guid: d61fbf4dfd71248179c6215c74b7487f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -12.19
+      value: -5.23
       objectReference: {fileID: 0}
     - target: {fileID: 4746058522450497633, guid: d61fbf4dfd71248179c6215c74b7487f, type: 3}
       propertyPath: m_LocalPosition.y

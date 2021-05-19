@@ -8,12 +8,16 @@ public class BattleSceneManager : MonoBehaviour
     Stage stage;
     Player player;
     ChipSelectManager chipSelectManager;
+    Cursor cursor;
     BattleSceneController controller;
+
+    private bool isChipSelectPhase;
 
     void Awake(){
       prepareBattle();
       folder = new Folder();
       folder.Prepare();
+      isChipSelectPhase = true;
     }
 
     // Start is called before the first frame update
@@ -24,7 +28,8 @@ public class BattleSceneManager : MonoBehaviour
     // Update is called once per frame
     void Update(){
       player.PlayerUpdate();
-      controller.BattleSceneControllerUpdate();
+      controller.BattleSceneControllerUpdate(isChipSelectPhase);
+ 
     }
     
     void prepareBattle(){
@@ -34,13 +39,16 @@ public class BattleSceneManager : MonoBehaviour
       GameObject playerGameObj = GameObject.Find("Player");
       player = playerGameObj.GetComponent<Player>();
 
+      GameObject cursorGameObj = GameObject.Find("Cursor");
+      cursor = cursorGameObj.GetComponent<Cursor>();
+
       chipSelectManager = new ChipSelectManager();
       controller = new BattleSceneController();
 
       chipSelectManager.Prepare();
       stage.Prepare();
       player.Prepare(stage);
-      controller.Prepare(player);
+      controller.Prepare(player,cursor);
     }
 
 
